@@ -2907,3 +2907,56 @@ input, select, textarea {
 			}
 
 	}
+
+/* === FORCE ALL PORTFOLIO BOXES TO MATCH HEIGHT === */
+
+/* Make the columns flex so the .box can stretch */
+#main .row > div {
+  display: flex;
+}
+
+/* Make each card fill the column height */
+#main .row > div > .box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Make images consistent height */
+#main .box .image.featured img {
+  height: 200px;      /* adjust if you want */
+  object-fit: cover;
+}
+
+/* Push footer (button) to the bottom */
+#main .box footer {
+  margin-top: auto;
+}
+
+.box .image.featured img {
+	margin-top: 10px;
+  transform: scale(0.97);   /* 0.9 = zoom out */
+  transform-origin: center;
+}
+
+/* Make featured images smaller WITHOUT cropping */
+.box .image.featured {
+  height: 210px;              /* space reserved for image */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;           /* keeps it neat */
+}
+
+.box .image.featured img {
+  width: auto;                /* don't force full width */
+  height: auto;
+  max-width: 100%;             /* controls how "zoomed out" it is */
+  max-height: 100%;
+  object-fit: contain;        /* no crop */
+}
+
+/* Rounded corners on featured images */
+.box .image.featured img {
+  border-radius: 12px;   /* change to 6px, 20px etc */
+}
