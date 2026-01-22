@@ -3544,3 +3544,11 @@ strong, b {
     gap: 10px;
   }
 }
+/* Mobile (iPhone) - Single Column Layout */
+@media screen and (max-width: 480px) {
+  .row > .col-4,
+  .row > .col-4-medium,
+  .row > .col-4-small {
+    width: 100%;
+  }
+}
