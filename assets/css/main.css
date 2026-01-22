@@ -3591,13 +3591,13 @@ strong, b {
 /* ========== SIDEBAR NAVIGATION ========== */
 
 /* Desktop Projects Dropdown */
-.projects-dropdown-container {
+/* .projects-dropdown-container {
   position: relative;
   display: none;
   visibility: hidden;
   height: 0;
   overflow: hidden;
-}
+} */
 
 .projects-dropdown-btn {
   background: linear-gradient(135deg, #ff8c42 0%, #ff6b35 100%);
@@ -3636,7 +3636,6 @@ strong, b {
   position: absolute;
   top: calc(100% + 8px);
   left: 50%;
-  transform: translateX(-50%);
   background: linear-gradient(135deg, rgba(250, 246, 240, 0.98) 0%, rgba(245, 237, 227, 0.95) 100%);
   border: 2px solid #ff8c42;
   border-radius: 8px;
@@ -3657,6 +3656,24 @@ strong, b {
   transform: translateX(-50%) translateY(0);
   pointer-events: auto;
 }
+
+.projects-dropdown-container {
+  position: relative;
+}
+
+.projects-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+}
+
+.projects-dropdown-menu.active {
+  display: block;
+}
+
 
 .projects-dropdown-menu::before {
   content: '';
@@ -3956,3 +3973,5 @@ strong, b {
     font-size: 0.95em;
   }
 }
+
+
