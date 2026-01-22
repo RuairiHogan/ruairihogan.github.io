@@ -138,10 +138,7 @@ document.addEventListener('DOMContentLoaded', function() {
     '%cWelcome to Ruairi Hogan\'s Portfolio!',
     'color: #32c8ff; font-size: 20px; font-weight: bold; text-shadow: 0 0 10px rgba(50, 200, 255, 0.5);'
   );
-  console.log(
-    '%cBuilt with modern tech animations and cutting-edge web design',
-    'color: #a0b0d0; font-size: 14px;'
-  );
+
 });
 
 // Loading animation

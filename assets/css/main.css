@@ -3819,7 +3819,7 @@ strong, b {
   right: 15px;
   background: transparent;
   border: none;
-  font-size: 32px;
+  font-size: 28px;
   color: #d63031;
   cursor: pointer;
   z-index: 10001;
@@ -3829,6 +3829,9 @@ strong, b {
   display: flex;
   align-items: center;
   justify-content: center;
+  line-height: 1;
+  padding: 0;
+  font-weight: 300;
 }
 
 .sidebar-close:hover {
