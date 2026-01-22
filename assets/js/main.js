@@ -31,35 +31,35 @@
 			alignment: 'center'
 		});
 
-	// Nav.
+	// // Nav.
 
-		// Title Bar.
-			$(
-				'<div id="titleBar">' +
-					'<a href="#navPanel" class="toggle"></a>' +
-				'</div>'
-			)
-				.appendTo($body);
+	// 	// Title Bar.
+	// 		$(
+	// 			'<div id="titleBar">' +
+	// 				'<a href="#navPanel" class="toggle"></a>' +
+	// 			'</div>'
+	// 		)
+	// 			.appendTo($body);
 
-		// Panel.
-			$(
-				'<div id="navPanel">' +
-					'<nav>' +
-						$('#nav').navList() +
-					'</nav>' +
-				'</div>'
-			)
-				.appendTo($body)
-				.panel({
-					delay: 500,
-					hideOnClick: true,
-					hideOnSwipe: true,
-					resetScroll: true,
-					resetForms: true,
-					side: 'left',
-					target: $body,
-					visibleClass: 'navPanel-visible'
-				});
+	// 	// Panel.
+	// 		$(
+	// 			'<div id="navPanel">' +
+	// 				'<nav>' +
+	// 					$('#nav').navList() +
+	// 				'</nav>' +
+	// 			'</div>'
+	// 		)
+	// 			.appendTo($body)
+	// 			.panel({
+	// 				delay: 500,
+	// 				hideOnClick: true,
+	// 				hideOnSwipe: true,
+	// 				resetScroll: true,
+	// 				resetForms: true,
+	// 				side: 'left',
+	// 				target: $body,
+	// 				visibleClass: 'navPanel-visible'
+	// 			});
 
 	// Sidebar Navigation Toggle.
 		var $sidebarToggle = $('#sidebarToggle'),
