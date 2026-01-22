@@ -61,4 +61,81 @@
 					visibleClass: 'navPanel-visible'
 				});
 
+	// Sidebar Navigation Toggle.
+		var $sidebarToggle = $('#sidebarToggle'),
+			$sidebar = $('#sidebar'),
+			$sidebarOverlay = $('#sidebarOverlay'),
+			$sidebarClose = $('#sidebarClose');
+
+		// Toggle sidebar on button click
+		$sidebarToggle.on('click', function(e) {
+			e.stopPropagation();
+			$sidebar.toggleClass('active');
+			$sidebarToggle.toggleClass('active');
+			$sidebarOverlay.toggleClass('active');
+		});
+
+		// Close sidebar on overlay click
+		$sidebarOverlay.on('click', function() {
+			$sidebar.removeClass('active');
+			$sidebarToggle.removeClass('active');
+			$sidebarOverlay.removeClass('active');
+		});
+
+		// Close sidebar on close button click
+		$sidebarClose.on('click', function() {
+			$sidebar.removeClass('active');
+			$sidebarToggle.removeClass('active');
+			$sidebarOverlay.removeClass('active');
+		});
+
+		// Close sidebar on link click
+		$sidebar.find('a').on('click', function() {
+			$sidebar.removeClass('active');
+			$sidebarToggle.removeClass('active');
+			$sidebarOverlay.removeClass('active');
+		});
+
+		// Close sidebar on Escape key
+		$(document).on('keydown', function(e) {
+			if (e.keyCode === 27 && $sidebar.hasClass('active')) {
+				$sidebar.removeClass('active');
+				$sidebarToggle.removeClass('active');
+				$sidebarOverlay.removeClass('active');
+			}
+		});
+
+	// Desktop Projects Dropdown Menu.
+		var $dropdownBtn = $('#projectsDropdownToggle'),
+			$dropdownMenu = $('#projectsDropdown');
+
+		// Toggle dropdown on button click
+		$dropdownBtn.on('click', function(e) {
+			e.stopPropagation();
+			$dropdownMenu.toggleClass('active');
+			$dropdownBtn.toggleClass('active');
+		});
+
+		// Close dropdown on menu link click
+		$dropdownMenu.find('a').on('click', function() {
+			$dropdownMenu.removeClass('active');
+			$dropdownBtn.removeClass('active');
+		});
+
+		// Close dropdown when clicking outside
+		$(document).on('click', function(e) {
+			if (!$(e.target).closest('.projects-dropdown-container').length) {
+				$dropdownMenu.removeClass('active');
+				$dropdownBtn.removeClass('active');
+			}
+		});
+
+		// Close dropdown on Escape key
+		$(document).on('keydown', function(e) {
+			if (e.keyCode === 27) {
+				$dropdownMenu.removeClass('active');
+				$dropdownBtn.removeClass('active');
+			}
+		});
+
 })(jQuery);
