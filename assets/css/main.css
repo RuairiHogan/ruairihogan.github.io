@@ -3196,9 +3196,27 @@ body {
 }
 
 .projects-grid > * {
-  padding: 0 !important;
-  width: calc(33.333% - 14px) !important;
+  padding: 0;
+  flex: 0 0 calc(33.333% - 14px);
+  max-width: calc(33.333% - 14px);
 }
+
+/* Tablet: 2 across */
+@media screen and (max-width: 980px) {
+  .projects-grid > * {
+    flex-basis: calc(50% - 10px);
+    max-width: calc(50% - 10px);
+  }
+}
+
+/* Mobile: 1 per row */
+@media screen and (max-width: 736px) {
+  .projects-grid > * {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
 
 .project-card {
   background: linear-gradient(135deg, rgba(250, 246, 240, 0.9) 0%, rgba(245, 237, 227, 0.8) 100%);
