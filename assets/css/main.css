@@ -3594,6 +3594,9 @@ strong, b {
 .projects-dropdown-container {
   position: relative;
   display: none;
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
 }
 
 .projects-dropdown-btn {
@@ -3709,6 +3712,8 @@ strong, b {
 @media screen and (min-width: 737px) {
   .projects-dropdown-container {
     display: block !important;
+    visibility: visible !important;
+    height: auto !important;
   }
 
   .sidebar-toggle {
@@ -3910,6 +3915,10 @@ strong, b {
 @media screen and (max-width: 736px) {
   .projects-dropdown-container {
     display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    pointer-events: none !important;
   }
   
   .sidebar-toggle {
